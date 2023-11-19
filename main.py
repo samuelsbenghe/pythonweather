@@ -3,13 +3,13 @@ from internal.weather import Weather
 
 def print_weather(data):
     print("")
-    print(f"City: {data['location']['city']}")
-    print(f"Country: {data['location']['country']}")
-    print(f"Latitude: {data['location']['latitude']} | Longitude: {data['location']['longitude']}")
-    print(f"Sunrise: {data['location']['sunrise']} | Sunset: {data['location']['sunset']}")
+    print(f"City: {data.location.city}")
+    print(f"Country: {data.location.country}")
+    print(f"Latitude: {data.location.latitude} | Longitude: {data.location.longitude}")
+    print(f"Sunrise: {data.location.sunrise} | Sunset: {data.location.sunset}")
     print("")
-    print(f"Weather: {data['weather']['main']} | Description: {data['weather']['description']}")
-    print(f"Temperature: {data['weather']['temperature']}°C | Feels like: {data['weather']['feels_like']}°C | Min: {data['weather']['temp_min']}°C | Max: {data['weather']['temp_max']}°C")
+    print(f"Weather: {data.weather.main} | Description: {data.weather.description}")
+    print(f"Temperature: {data.weather.temperature}°C | Feels like: {data.weather.feels_like}°C | Min: {data.weather.temp_min}°C | Max: {data.weather.temp_max}°C")
     print("")
 
 

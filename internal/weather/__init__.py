@@ -1,6 +1,7 @@
 import requests
 import datetime
 import pandas as pd
+from internal.weather import weather_types
 
 
 class Weather:
@@ -60,7 +61,8 @@ def _get_data(latitude, longitude, api_key):
                 'temp_max': data['main']['temp_max'],
             },
         }
-        return _weather_data
+        class_weather_data = weather_types.WeatherData(_weather_data)  # Convert dict to class
+        return class_weather_data
     else:
         raise ValueError("Weather API Error: Weather data not found")
 
