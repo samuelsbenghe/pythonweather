@@ -14,7 +14,7 @@ def print_weather(data):
 
 
 def start_weather_app():
-    weather = Weather("3b0b63e5af21bd69a76d77b43d247827")
+    weather = Weather("")
     city = input("(type 'exit' to quit) Name a city: ")
     if city == "exit":
         print("Goodbye!")
